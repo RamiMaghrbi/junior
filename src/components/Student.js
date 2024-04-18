@@ -1,9 +1,9 @@
 import React from "react";
-import gpa from "./Header/svg/gpa.svg";
-import rank from "./Header/svg/rank.svg";
-import nonpass from "./Header/svg/non-hours.svg";
-import passed from "./Header/svg/hours-pass.svg";
-import remain from "./Header/svg/remain.svg";
+import gpa from "../Assets/images/svg/gpa.svg";
+import rank from "../Assets/images/svg/rank.svg";
+import nonpass from "../Assets/images/svg/non-hours.svg";
+import passed from "../Assets/images/svg/hours-pass.svg";
+import remain from "../Assets/images/svg/remain.svg";
 const Student = ({ student }) => {
   return (
     <div className="w-full flex flex-col gap-8">

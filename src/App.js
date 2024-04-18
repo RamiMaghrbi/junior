@@ -5,7 +5,10 @@ import Sidebar from "./components/Sidebar.js";
 import Course from "./components/Course.js";
 // import siper from "./components/Test.js";
 import Info from "./components/Info.js";
-import Pre from "./pages/Preregister.js";
+import Avi from "./pages/Available.js";
+import Acc from "./components/Acoount.js";
+import Economic from "./pages/Economic.js";
+import Home from "./pages/Home.js";
 const studentData = {
   img: require("./Assets/images/person.jpg"),
   studentName: "محمد عدنان تيناوي ",
@@ -21,10 +24,18 @@ const studentData = {
   pass: "119",
   nonpass: "20",
 };
+const accountData = {
+  positive: "3,000,000",
+  negative: "2,000,000",
+  ammount: "0",
+};
 function App() {
   return (
     <div className="App  ">
-      <Pre student={studentData} />
+      <Economic />
+      <Avi />
+      <Home />
+      {/* <Pre student={studentData} /> */}
     </div>
   );
 }
