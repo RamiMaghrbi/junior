@@ -1,10 +1,12 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import React, { useState } from 'react';
 import Sidebar from "./components/Sidebar.js";
 // import Student from "./components/Student";
 import Course from "./components/Course.js";
 // import siper from "./components/Test.js";
 import Info from "./components/Info.js";
+import LoginForm from './Login.js';
 import Pre from "./pages/Preregister.js";
 const studentData = {
   img: require("./Assets/images/person.jpg"),
@@ -22,9 +24,16 @@ const studentData = {
   nonpass: "20",
 };
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Example state variable
+
+  const handleLogin = () => {
+    // Implement your login logic here
+    setIsLoggedIn(true); // Set state to logged in after successful login
+  };
+
   return (
-    <div className="App  ">
-      <Pre student={studentData} />
+    <div className="App">
+      {isLoggedIn ? <Pre student={studentData} /> : <LoginForm onLogin={handleLogin} />}
     </div>
   );
 }
