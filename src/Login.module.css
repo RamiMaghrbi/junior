@@ -1,0 +1,118 @@
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; 
+}
+
+.loginImage {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.loginImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(0px); /* Add blur effect to background image */
+    background-color: rgba(0, 0, 255, 0.7); /* Change the color and opacity */
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px; 
+    max-width: 70%;
+    height: auto; 
+    
+}
+
+
+.loginForm {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+    width: 75%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+.loginForm h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #00caca;
+    font-weight: bold;
+    font-size: 42px;
+}
+
+.loginForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm label {
+    margin-bottom: 8px;
+    color: #000;
+    font-weight: bold;
+}
+
+.loginForm label:last-of-type {
+    font-weight: normal;
+}
+
+
+.loginForm input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.checkbox-container label {
+    font-size: 14px;
+    
+}
+
+.loginForm button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;  
+}
+
+.loginForm button:hover {
+    background-color: #0056b3;
+}
+
+.loginForm a {
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    margin-top: 8px;
+    display: block;
+}
+
+.loginForm a:hover {
+    text-decoration: underline;
+}
