@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import React, { useState } from "react";
 import Sidebar from "./components/Sidebar.js";
 // import Student from "./components/Student";
 import Course from "./components/Course.js";
@@ -9,6 +10,8 @@ import Avi from "./pages/Available.js";
 import Acc from "./components/Acoount.js";
 import Economic from "./pages/Economic.js";
 import Home from "./pages/Home.js";
+import LoginForm from "./Login.js";
+import Pre from "./pages/Preregister.js";
 const studentData = {
   img: require("./Assets/images/person.jpg"),
   studentName: "محمد عدنان تيناوي ",
@@ -30,6 +33,13 @@ const accountData = {
   ammount: "0",
 };
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Example state variable
+
+  const handleLogin = () => {
+    // Implement your login logic here
+    setIsLoggedIn(true); // Set state to logged in after successful login
+  };
+
   return (
     <div className="App  ">
       <Economic />
