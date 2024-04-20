@@ -10,8 +10,8 @@ import Avi from "./pages/Available.js";
 import Acc from "./components/Acoount.js";
 import Economic from "./pages/Economic.js";
 import Home from "./pages/Home.js";
-import LoginForm from "./Login.js";
-import Pre from "./pages/Preregister.js";
+import LoginForm from "./pages/Login.js";
+// import Pre from "./pages/Preregister.js";
 const studentData = {
   img: require("./Assets/images/person.jpg"),
   studentName: "محمد عدنان تيناوي ",
@@ -42,9 +42,9 @@ function App() {
 
   return (
     <div className="App  ">
-      <Economic />
-      <Avi />
-      <Home />
+      <LoginForm/>
+
+    
       {/* <Pre student={studentData} /> */}
     </div>
   );
