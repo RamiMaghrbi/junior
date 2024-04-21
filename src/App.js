@@ -11,6 +11,8 @@ import Acc from "./components/Acoount.js";
 import Economic from "./pages/Economic.js";
 import Home from "./pages/Home.js";
 import LoginForm from "./pages/Login.js";
+import ActiveSlider from "./components/ActiveSlider.js";
+
 // import Pre from "./pages/Preregister.js";
 const studentData = {
   img: require("./Assets/images/person.jpg"),
@@ -42,9 +44,8 @@ function App() {
 
   return (
     <div className="App  ">
-      <LoginForm/>
+      <Home/>
 
-    
       {/* <Pre student={studentData} /> */}
     </div>
   );

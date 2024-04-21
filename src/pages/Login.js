@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logoImage from '../Assets/images/aiu-building.jpg';
 import LeftImage from '../Assets/images/Aiu.jpg';
 import AIULogo from '../Assets/images/AIU-logo.png';
+import ActiveSlider from '../components/ActiveSlider';
 
 
 function LoginForm() {
@@ -24,7 +25,7 @@ function LoginForm() {
           </div>
 
           <div className="mb-4">
-            <input type="text" id="id" placeholder='ID Number' value={id} onChange={e => setId(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 placeholder-gray-500 text-gray-700 opacity-50 text-left" />
+            <input type="text" id="id" placeholder='ID Number' value={id} onChange={e => setId(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-4 placeholder-gray-500 text-gray-700 opacity-50 text-left" />
           </div>
 
           <div className="mb-4 flex flex-row-reverse items-center">
@@ -32,7 +33,7 @@ function LoginForm() {
           </div>
 
           <div className="mb-4">
-            <input type="password" id="password" placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-2 placeholder-gray-500 text-gray-700 opacity-50 text-left" />
+            <input type="password" id="password" placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} className="w-full border border-gray-300 rounded px-3 py-4 placeholder-gray-500 text-gray-700 opacity-50 text-left" />
           </div>
 
           <div class="flex flex-row-reverse items-center mb-4">
@@ -48,6 +49,10 @@ function LoginForm() {
         <img src={LeftImage} alt="Login background" className="absolute top-0 left-0 w-full h-full object-cover opacity-[.47]" />
         <div className="absolute top-0 left-0 w-full h-full bg-blue-900 opacity-70"></div>
         <img src={AIULogo} alt="AIU Logo" className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24" />
+
+        <div className="absolute bottom-0 left-0 w-full">
+          <ActiveSlider />
+        </div>
       </div>
 
     </div>
