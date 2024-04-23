@@ -8,12 +8,16 @@ import Course from "./components/Course.js";
 import Info from "./components/Info.js";
 import Avi from "./pages/Available.js";
 import Acc from "./components/Acoount.js";
+import Preregister from "./components/preregister.js";
+
+
+
 import Economic from "./pages/Economic.js";
 import Home from "./pages/Home.js";
 import LoginForm from "./pages/Login.js";
 import ActiveSlider from "./components/ActiveSlider.js";
 
-// import Pre from "./pages/Preregister.js";
+
 const studentData = {
   img: require("./Assets/images/person.jpg"),
   studentName: "محمد عدنان تيناوي ",
@@ -44,7 +48,7 @@ function App() {
 
   return (
     <div className="App  ">
-      <Home/>
+      <Preregister/>
 
       {/* <Pre student={studentData} /> */}
     </div>
