@@ -163,9 +163,9 @@ const Navbar = () => {
           <ul className="flex flex-col items-end text-gray-800">
             {menuItems.map(({ icon, text }, index) => {
               return (
-                <div key={index} className=" py-4">
-                  <li className=" flex cursor-pointer rounded-2xl mx-auto p-2 text-white hover:bg-blue-400 w-full">
-                    {text} {icon}
+                <div key={index} className=" py-4 w-full flex ">
+                  <li className=" flex flex-row-reverse cursor-pointer rounded-2xl mx-auto p-2 text-white hover:bg-blue-400 w-full">
+                  {icon} {text} 
                   </li>
                 </div>
               );

@@ -8,6 +8,7 @@ import {
     Button,
 } from "@material-tailwind/react";
 import { MdDeleteSweep } from "react-icons/md";
+import Bp from "../Assets/images/aiu-1.jpg"
 
 
 const data = [
@@ -35,9 +36,27 @@ const data = [
         subject: "Cybersecurity",
         selected: false,
     },
+    {
+        subject: "Cybersecurity",
+        selected: false,
+    },
+    {
+        subject: "Cybersecurity",
+        selected: false,
+    },
+    {
+        subject: "Cybersecurity",
+        selected: false,
+    },
+    {
+        subject: "Cybersecurity",
+        selected: false,
+    },
+ 
 ];
 
-const TABLE_HEAD = ["Delete","Subject Selected"];
+const TABLE_HEAD = ["Delete", "Subject Selected"];
+const totalHours = 0;
 
 
 const Preregister = () => {
@@ -59,7 +78,7 @@ const Preregister = () => {
     };
 
     return (
-        <div className="w-full">
+        <div className="w-full" >
             <div className="mx-auto px-4 w-full flex flex-col gap-10">
                 <div className="relative  w-full sm:max-w-2xl sm:mx-auto">
                     <div className="overflow-hidden z-0 rounded-full relative p-5">
@@ -84,19 +103,18 @@ const Preregister = () => {
 
                 <div className="flex flex-col sm:flex-row gap-10">
 
-                <Card className={`flex-1 mt-6 table-auto h-full w-full ${selectedSubjects.length > 5 ? 'table-scroll' : ''}`}>
+                    <Card className={`flex-1 mt-6 table-auto h-full w-full ${selectedSubjects.length > 5 ? 'table-scroll' : ''}`}>
                         <table className="w-full min-w-max table-auto text-left">
                             <thead>
-                                <tr>
+                                <tr className="rounded bg-gradient-to-br from-blue-500 to-blue-700">
                                     {TABLE_HEAD.map((head) => (
                                         <th
                                             key={head}
-                                            className="border-b border-blue-gray-100 bg-blue-gray-50 p-4"
+                                            className="border-b border-blue-gray-100 p-4 "
                                         >
                                             <Typography
-                                                variant="small"
-                                                color="blue-gray"
-                                                className="font-normal leading-none opacity-70"
+                                                variant="large"
+                                                className="font-normal leading-none text-white"
                                             >
                                                 {head}
                                             </Typography>
@@ -104,40 +122,50 @@ const Preregister = () => {
                                     ))}
                                 </tr>
                             </thead>
+
                             <tbody>
                                 {selectedSubjects.map((subject, index) => (
-                                    <tr key={index}>
+                                    <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gradient-to-r from-gray-200 to-blue-300'}>
                                         <td className="p-4 border-b border-blue-gray-50">
-                                            <Button onClick={() => removeFromCart(index)}>
-                                                <MdDeleteSweep />
+                                            <Button onClick={() => removeFromCart(index)} className="bg-red-400">
+                                                <MdDeleteSweep style={{ fontSize: '20px' }}/>
                                             </Button>
                                         </td>
-                                        <td className="p-4 border-b border-blue-gray-50">
+                                        <td className="p-4 border-b border-blue-gray-50 opacity-70 text-white">
                                             <Typography
                                                 variant="small"
-                                                color="blue-gray"
+                                                color="gray"
                                                 className="font-normal"
                                             >
                                                 {subject}
                                             </Typography>
                                         </td>
-                                        
+
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
+                        <div className="p-4">
+                            <Typography
+                                variant="large"
+                                className="font-normal leading-none text-black"
+                            >
+                                Total Hours: {totalHours}
+                            </Typography>
+                        </div>
                     </Card>
+
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {filteredData.map((item, index) => (
-                            <Card key={index} className="rounded bg-gradient-to-br from-blue-700 to-blue-900 w-full px-20">
+                            <Card key={index} className="rounded bg-white w-full px-19">
                                 <CardBody>
-                                    <Typography variant="h4" color="blue-gray" className="mb-2 pt-5 text-white">
+                                    <Typography variant="h3" color="blue-gray" className="mb-2 pt-5 op opacity-70 text-black px-5">
                                         {item.subject}
                                     </Typography>
                                 </CardBody>
                                 <CardFooter className="pt-5 pb-5">
-                                    <Button onClick={() => addToCart(item.subject)} className="rounded bg-[#fdac53] text-white px-20">Add Subject</Button>
+                                    <Button onClick={() => addToCart(item.subject)} className="rounded bg-gradient-to-r from-gray-500 to-blue-600 opacity-70 text-white px-20">Select Subject</Button>
                                 </CardFooter>
                             </Card>
                         ))}

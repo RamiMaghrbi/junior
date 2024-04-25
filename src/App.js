@@ -8,7 +8,7 @@ import Course from "./components/Course.js";
 import Info from "./components/Info.js";
 import Avi from "./pages/Available.js";
 import Acc from "./components/Acoount.js";
-import Preregister from "./components/preregister.js";
+import Preregister from "./pages/Pregisterpages.js";
 
 
 
@@ -49,7 +49,6 @@ function App() {
   return (
     <div className="App  ">
       <Preregister/>
-
       {/* <Pre student={studentData} /> */}
     </div>
   );
