@@ -4,6 +4,7 @@ import rank from "../Assets/images/svg/rank.svg";
 import nonpass from "../Assets/images/svg/non-hours.svg";
 import passed from "../Assets/images/svg/hours-pass.svg";
 import remain from "../Assets/images/svg/remain.svg";
+import Bp from "../Assets/images/aiu-1.jpg"
 const Student = ({ student }) => {
   return (
     <div className="w-full flex flex-col gap-8">
@@ -43,7 +44,7 @@ const Student = ({ student }) => {
           </div>
         </div>
       </div> */}
-      <div className="student-profile flex justify-center mt-4   ">
+      <div className="student-profile flex justify-center mt-4">
         <div className="w-[70%]">
           <div
             className=""
@@ -74,7 +75,7 @@ const Student = ({ student }) => {
                         </div>
                       </div>
 
-                      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs  justify-around dark:bg-gray-800">
+                      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs justify-around dark:bg-gray-800">
                         <div class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500">
                           <img src={rank} alt="rank" className="w-6 h-6" />
                         </div>

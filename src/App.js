@@ -1,21 +1,14 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react";
-import Sidebar from "./components/Sidebar.js";
-// import Student from "./components/Student";
-import Course from "./components/Course.js";
-// import siper from "./components/Test.js";
-import Info from "./components/Info.js";
+
+
 import Avi from "./pages/Available.js";
-import Acc from "./components/Acoount.js";
-import Preregister from "./pages/Pregisterpages.js";
-
-
-
 import Economic from "./pages/Economic.js";
 import Home from "./pages/Home.js";
 import LoginForm from "./pages/Login.js";
-import ActiveSlider from "./components/ActiveSlider.js";
+import Preregister from "./pages/Pregisterpages.js";
+
 
 
 const studentData = {
@@ -48,7 +41,8 @@ function App() {
 
   return (
     <div className="App  ">
-      <Preregister/>
+      <Home/>
+
       {/* <Pre student={studentData} /> */}
     </div>
   );

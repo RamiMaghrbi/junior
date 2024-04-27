@@ -22,23 +22,26 @@ const studentData = {
 
 function Pre() {
     return (
-    <div className="flex flex-row relative" 
-         style={{ 
-             backgroundImage: `url(${Bp})`, 
-             backgroundSize: 'cover', // Change to 'auto' for normal size
-             backgroundRepeat: 'no-repeat',
-             backgroundAttachment: 'fixed' // Add this line to make the image fixed when scrolling
-         }}
-    >
-        <div className="absolute inset-0 bg-white opacity-50"></div>
-        <div className="fixed top-0 left-0 h-screen w-[200px] bg-[#f0f0f0] overflow-auto">
-            <Sidebar />
-        </div>
-        <div className="flex-grow min-h-screen pl-[200px] pb-10">
-            <Info student={studentData} />
-            <BeforPre />
-        </div>
-    </div>
+        <div className="flex flex-row w-full h-full relative" 
+        style={{ 
+            backgroundImage: `url(${Bp})`, 
+            backgroundSize: 'cover', 
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed' 
+        }}
+   >
+       <div className="absolute inset-0 bg-white opacity-50"></div>
+       <div className="fixed top-0 left-0 h-screen w-[200px] bg-[#f0f0f0] overflow-auto">
+           <Sidebar />
+       </div>
+       <div className="flex-grow min-h-screen pl-[200px] pb-10">
+           <Info student={studentData} />
+           <div style={{ maxHeight: '100vh', overflow: 'auto' }}>
+               <BeforPre />
+           </div>
+       </div>
+   </div>
+   
 );
 }
 

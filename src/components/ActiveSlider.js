@@ -58,8 +58,8 @@ const ActiveSlider = () => {
         modules={[EffectCoverflow, Pagination]}
         effect={'coverflow'}
         loop={true}
-        spaceBetween={50}
-        slidesPerView={1}
+        spaceBetween={70}
+        slidesPerView={2}
         pagination={{
           clickable: true,
         }}
