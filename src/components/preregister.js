@@ -8,7 +8,7 @@ import {
     Button,
 } from "@material-tailwind/react";
 import { MdDeleteSweep } from "react-icons/md";
-import Bp from "../Assets/images/aiu-1.jpg"
+
 
 
 const data = [

@@ -8,6 +8,7 @@ import Economic from "./pages/Economic.js";
 import Home from "./pages/Home.js";
 import LoginForm from "./pages/Login.js";
 import Preregister from "./pages/Pregisterpages.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 
@@ -41,7 +42,7 @@ function App() {
 
   return (
     <div className="App  ">
-      <Home/>
+      <Preregister/>
 
       {/* <Pre student={studentData} /> */}
     </div>
