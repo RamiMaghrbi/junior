@@ -129,23 +129,24 @@ const DataTableExample = () => {
   return (
     <div className="w-full">
       <div className="mx-auto px-4 w-full flex flex-col gap-10">
-        <div class="relative  w-full sm:max-w-2xl sm:mx-auto">
-          <div class="overflow-hidden z-0 rounded-full relative p-5">
-            <form role="form" class="relative flex z-50 bg-white rounded-full">
+        <div className="relative  w-full sm:max-w-xl sm:mx-auto">
+          <div className="overflow-hidden z-0 rounded-full relative p-4">
+            <form
+              role="form"
+              className="relative flex z-50 bg-white rounded-full"
+            >
               <input
                 type="text"
-                placeholder="enter your search here"
+                placeholder="Enter your search here"
                 className="rounded-full flex-1 px-6 py-4 text-gray-700 focus:outline-none"
-                // type="text"
-                id="filter"
                 value={filterText}
                 onChange={(e) => setFilterText(e.target.value)}
               />
             </form>
-            <div class="glow glow-1 z-10 bg-blue-300 absolute"></div>
-            <div class="glow glow-2 z-20 bg-blue-500 absolute"></div>
-            <div class="glow glow-3 z-30 bg-blue-700 absolute"></div>
-            <div class="glow glow-4 z-40 bg-blue-900 absolute"></div>
+            <div className="glow glow-1 z-10 bg-blue-300 absolute"></div>
+            <div className="glow glow-2 z-20 bg-blue-500 absolute"></div>
+            <div className="glow glow-3 z-30 bg-blue-700 absolute"></div>
+            <div className="glow glow-4 z-40 bg-blue-900 absolute"></div>
           </div>
         </div>
 
@@ -191,14 +192,16 @@ const DataTableExample = () => {
           onRowClicked={(row) => handleRowClick(row)}
         />
       </div>
-      {selectedSubject && selectedDescription && (
-        <DescriptionPopup
-          subject={selectedSubject}
-          description={selectedDescription}
-          onClose={closePopup}
-        />
-      )}
-    </div>
+      {
+        selectedSubject && selectedDescription && (
+          <DescriptionPopup
+            subject={selectedSubject}
+            description={selectedDescription}
+            onClose={closePopup}
+          />
+        )
+      }
+    </div >
   );
 };
 

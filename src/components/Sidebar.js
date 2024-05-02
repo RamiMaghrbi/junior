@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaMoneyBillWave } from "react-icons/fa";
@@ -58,24 +58,26 @@ const Navbar = () => {
           <ul className="flex flex-col items-end text-gray-800">
             {menuItems.map(({ icon, text, path }, index) => {
               return (
-                <div key={index} className=" py-4">
-                  <li className=" flex cursor-pointer   rounded-2xl mx-auto p-2 text-white hover:bg-blue-400">
-                    <NavLink
-                      to={path}
-                      className={({ isActive }) =>
-                        ["nav-link", isActive ? "active" : null].join(" ")
-                      }
-                      activeClassName="active"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      {icon}
-                      <span>{text}</span>
-                    </NavLink>
-                  </li>
-                </div>
+                <li
+                  key={index}
+                  className=" py-4 flex flex-row-reverse cursor-pointer mx-auto p-2 text-white hover:bg-blue-400 w-full"
+                >
+                  <NavLink
+                    to={path}
+                    className={({ isActive }) =>
+                      ["nav-link", isActive ? "active" : null].join(" ")
+                    }
+                    activeClassName="active"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      flexDirection: "row-reverse",
+                    }}
+                  >
+                    {icon}
+                    <span>{text}</span>
+                  </NavLink>
+                </li>
               );
             })}
           </ul>

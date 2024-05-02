@@ -1,6 +1,6 @@
 import React from "react";
+import BeforPre from "../components/preregister";
 import Info from "../components/Info";
-import Stu from "../components/Student";
 import Sidebar from "../components/Sidebar";
 import Bp from "../Assets/images/aiu-1.jpg";
 
@@ -19,31 +19,30 @@ const studentData = {
   pass: "119",
   nonpass: "20",
 };
-function prof() {
+
+function Pre() {
   return (
-    <div className="flex flex-col w-full">
-      {/* <div>
-=======
-    <div className="flex flex-row-reverse w-full relative"
+    <div
+      className="flex flex-row w-full h-full relative"
       style={{
         backgroundImage: `url(${Bp})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
-        opacity: 0.8,
-        
-      }}>
-      <div className="inset-0 bg-white h-full opacity-50"></div>
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      <div className="absolute inset-0 bg-white opacity-50"></div>
       <div className="fixed top-0 left-0 h-screen w-[200px] bg-[#f0f0f0] overflow-auto">
-
-       
-      </div> 
-      {/* <Student student={studentData} className="text-white" /> */}
-
-      <Info student={studentData} />
-      <Stu student={studentData} />
-      {/* <Student /> */}
+        <Sidebar />
+      </div>
+      <div className="flex-grow min-h-screen pl-[200px] pb-10">
+        <Info student={studentData} />
+        <div style={{ maxHeight: "100vh", overflow: "auto" }}>
+          <BeforPre />
+        </div>
+      </div>
     </div>
   );
 }
-export default prof;
+
+export default Pre;
