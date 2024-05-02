@@ -20,9 +20,9 @@ const studentData = {
 function prof() {
   return (
     <div className="flex flex-row-reverse w-full">
-      <div>
+      {/* <div>
         <Sidebar />
-      </div>
+      </div> */}
       {/* <Student student={studentData} className="text-white" /> */}
       <div className="w-full flex flex-col">
         <Info student={studentData} />

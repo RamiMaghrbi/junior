@@ -20,9 +20,6 @@ const studentData = {
 function Pre() {
   return (
     <div className="flex flex-row-reverse w-full">
-      <div>
-        <Sidebar />
-      </div>
       {/* <Student student={studentData} className="text-white" /> */}
       <div className="w-full flex flex-col">
         <Info student={studentData} />
