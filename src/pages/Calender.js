@@ -1,7 +1,6 @@
 import React from "react";
+import Cale from "../components/Cale";
 import Info from "../components/Info";
-import Sidebar from "../components/Sidebar";
-import Account from "../components/Acoount";
 const studentData = {
   img: require("../Assets/images/person.jpg"),
   studentName: "محمد عدنان تيناوي ",
@@ -17,23 +16,12 @@ const studentData = {
   pass: "119",
   nonpass: "20",
 };
-const accountData = {
-  positive: "3,000,000",
-  negative: "2,000,000",
-  ammount: "0",
-};
-function Eco() {
+function Calendar() {
   return (
-    <div className="flex flex-row-reverse w-full">
-      {/* <div>
-        <Sidebar />
-      </div> */}
-
-      <div className="w-full flex flex-col">
-        <Info student={studentData} />
-        <Account account={accountData} />
-      </div>
+    <div className="w-full flex flex-col">
+      <Info student={studentData} />
+      <Cale />
     </div>
   );
 }
-export default Eco;
+export default Calendar;

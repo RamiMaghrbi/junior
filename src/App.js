@@ -1,15 +1,16 @@
-// import logo from "./logo.svg";
 import "./App.css";
-import React, { useState } from "react";
-
 
 import Avi from "./pages/Available.js";
 import Economic from "./pages/Economic.js";
 import Home from "./pages/Home.js";
 import LoginForm from "./pages/Login.js";
-import Preregister from "./pages/Pregisterpages.js";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Courses from "./pages/Available.js";
+import Side from "./components/Sidebar.js";
+import Calendar from "./pages/Calender.js";
+import { Routes, Route } from "react-router-dom";
+
+import Preregister from "./pages/Pregisterpages.js";
 
 
 const studentData = {
@@ -32,21 +33,28 @@ const accountData = {
   negative: "2,000,000",
   ammount: "0",
 };
+
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Example state variable
-
-  const handleLogin = () => {
-    // Implement your login logic here
-    setIsLoggedIn(true); // Set state to logged in after successful login
-  };
-
   return (
-    <div className="App  ">
-      <Preregister/>
-
-      {/* <Pre student={studentData} /> */}
+    <div className="App">
+      <div className="flex flex-row-reverse ">
+        <div>
+          <Side />
+        </div>
+        {/* <Student student={studentData} className="text-white" /> */}
+        <div className="w-full flex flex-col">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/account" element={<Economic />}></Route>
+            <Route path="/courses" element={<Courses />}></Route>
+            <Route path="/calendar" element={<Calendar />}></Route>
+            <Route path="/preregister" element={<Preregister />}></Route>
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default App;
+

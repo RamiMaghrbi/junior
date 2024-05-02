@@ -4,48 +4,13 @@ import rank from "../Assets/images/svg/rank.svg";
 import nonpass from "../Assets/images/svg/non-hours.svg";
 import passed from "../Assets/images/svg/hours-pass.svg";
 import remain from "../Assets/images/svg/remain.svg";
-import Bp from "../Assets/images/aiu-1.jpg"
+
+
 const Student = ({ student }) => {
   return (
     <div className="w-full flex flex-col gap-8">
-      {/* <div className="flex justify-between mx-14 mt-4">
-        <div className="flex items-center  gap-2">
-          <div className="relative">
-            <img
-              src={student.img}
-              className="h-16 w-16 rounded-full object-cover"
-              alt="rami"
-            />
-            <div className="absolute inset-0 rounded-full shadow-inner"></div>
-          </div>
-          <div className="ml-4 gap-1 flex flex-col ">
-            <h2 className="font-bold text-gray-800 text-lg">
-              {student.studentName}
-            </h2>
-
-            <p className="text-gray-600 ">{student.email}</p>
-          </div>
-        </div>
-        <div>
-          <div className="flex gap-4 ">
-            <p className="text-grey-600 mt-1 border-gray-400">
-              {student.major}
-            </p>
-            <span className="border-gray-500 border-solid mt-0.5 border-l-4">
-              {" "}
-            </span>
-            <p className="text-grey-600 mt-1">{student.semster}</p>
-          </div>
-          <div className="mr-5 py-2 inline-flex">
-            <span className="text-gray-800 text-sm py-2 px-3   ">
-              الحالة الاكاديمية{" "}
-            </span>{" "}
-            <span className=" py-2 px-3 "> {student.academicStatus} </span>
-          </div>
-        </div>
-      </div> */}
       <div className="student-profile flex justify-center mt-4">
-        <div className="w-[70%]">
+        <div className="w-[90%]">
           <div
             className=""
             style={{
@@ -53,78 +18,78 @@ const Student = ({ student }) => {
                 "0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12)",
             }}
           >
-            <div className="p-1 bg-[#607D8B] flex">
+            <div className="p-1 bg-blue-700 h-9 flex">
               <span className="mr-5 text-white">معلومات الطالب</span>
             </div>
             <div>
-              <div class="py-5">
+              <div>
                 <main class="h-full overflow-y-auto">
                   <div class="container  mx-auto grid">
-                    <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-3">
-                      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs  justify-around dark:bg-gray-800 ">
+                    <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-3 bg-white" >
+                      <div class="flex items-center p-4 bg-gradient-to-r from-gray-400 to-blue-500 rounded-lg shadow-xs  justify-around pt-3 ">
                         <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
-                          <img src={gpa} alt="gpa" className="w-6 h-6" />
+                          <img src={gpa} alt="gpa" className="w-9 h-9" />
                         </div>
                         <div>
                           <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
                             المعدل التراكمي
                           </p>
-                          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                          <p class="text-lg font-semibold text-gray-700 ">
                             {student.rating}
                           </p>
                         </div>
                       </div>
 
-                      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs justify-around dark:bg-gray-800">
+                      <div class="flex items-center p-4 bg-gradient-to-r from-gray-400 to-blue-500 rounded-lg shadow-xs justify-around ">
                         <div class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500">
-                          <img src={rank} alt="rank" className="w-6 h-6" />
+                          <img src={rank} alt="rank" className="w-9 h-9" />
                         </div>
                         <div>
-                          <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                          <p class="mb-2 text-base font-medium text-gray-600 dark:text-gray-400">
                             الترتيب
                           </p>
-                          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                          <p class="text-lg font-semibold text-gray-700 ">
                             #{student.rank}
                           </p>
                         </div>
                       </div>
 
-                      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs  justify-around dark:bg-gray-800">
+                      <div class="flex items-center p-4 bg-gradient-to-r from-gray-400 to-blue-500 rounded-lg shadow-xs  justify-around ">
                         <div class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500">
-                          <img src={nonpass} alt="hours" className="w-6 h-6" />
+                          <img src={nonpass} alt="hours" className="w-9 h-9" />
                         </div>
                         <div>
-                          <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                          <p class="mb-2 text-base font-medium text-gray-600 dark:text-gray-400">
                             عدد الساعات الشرطية
                           </p>
-                          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                          <p class="text-lg font-semibold text-gray-700 ">
                             {student.nonpass}
                           </p>
                         </div>
                       </div>
 
-                      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs  justify-around dark:bg-gray-800">
+                      <div class="flex items-center p-4 bg-gradient-to-r from-gray-400 to-blue-500 rounded-lg shadow-xs  justify-around ">
                         <div class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500">
-                          <img src={passed} alt="pass" className="w-6 h-6" />
+                          <img src={passed} alt="pass" className="w-9 h-9" />
                         </div>
                         <div>
-                          <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                          <p class="mb-2 text-base font-medium text-gray-600 dark:text-gray-400">
                             عدد الساعات المجتازة
                           </p>
-                          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                          <p class="text-lg font-semibold text-gray-700 ">
                             {student.hours}
                           </p>
                         </div>
                       </div>
-                      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs  justify-around dark:bg-gray-800">
+                      <div class="flex items-center p-4 bg-gradient-to-r from-gray-400 to-blue-500 rounded-lg shadow-xs  justify-around ">
                         <div class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500">
-                          <img src={remain} alt="pass" className="w-6 h-6" />
+                          <img src={remain} alt="pass" className="w-9 h-9" />
                         </div>
                         <div>
-                          <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                          <p class="mb-2 text-base font-medium text-gray-600 dark:text-gray-400">
                             عدد الساعات الشرطية
                           </p>
-                          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                          <p class="text-lg font-semibold text-gray-700 ">
                             {student.remain}
                           </p>
                         </div>

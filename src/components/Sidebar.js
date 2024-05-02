@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaMoneyBillWave } from "react-icons/fa";
@@ -11,11 +12,32 @@ import Logo from "../Assets/images/AIU-logo.png";
 
 const Navbar = () => {
   const menuItems = [
-    { icon: <FaHome size={20} className="mr-4" />, text: "home"},
-    { icon: <FaMoneyBillWave size={20} className="mr-4" />, text: "Account "},
-    { icon: <FaBookOpen size={20} className="mr-4" />, text: "courses" },
-    { icon: <FaClipboardCheck size={20} className="mr-4" />, text: "preregisterting" },
-
+    { icon: <FaHome size={20} className="mr-4" />, text: "Home", path: "/" },
+    {
+      icon: <FaCalendarAlt size={20} className="mr-4" />,
+      text: "Semester Calendar",
+      path: "/calendar",
+    },
+    {
+      icon: <FaMoneyBillWave size={20} className="mr-4" />,
+      text: "Account",
+      path: "/account",
+    },
+    {
+      icon: <FaBookOpen size={20} className="mr-4" />,
+      text: "Courses",
+      path: "/courses",
+    },
+    {
+      icon: <FaClipboardCheck size={20} className="mr-4" />,
+      text: "Pre-registering",
+      path: "/preregister",
+    },
+    {
+      icon: <FaClipboardList size={20} className="mr-4" />,
+      text: "Final Registering",
+      path: "/finalregister",
+    },
   ];
 
   return (
@@ -34,14 +56,30 @@ const Navbar = () => {
           <img src={Logo} className="w-1/3 text-center" alt="Menu" />
         </div>
         <nav>
-          <ul className="flex flex-col items-end text-gray-800">
-            {menuItems.map(({ icon, text, href }, index) => {
+          <ul className="flex flex-col gap-4 items-end text-gray-800">
+            {menuItems.map(({ icon, text, path }, index) => {
               return (
-                <div key={index} className=" py-4 w-full flex ">
-                  <li className=" flex flex-row-reverse cursor-pointer mx-auto p-2 text-white hover:bg-blue-400 w-full">
-                    {icon} {text}
-                  </li>
-                </div>
+                <NavLink
+                    to={path}
+                    className="hover:bg-blue-400"
+                    activeClassName="active"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      flexDirection: "row-reverse",
+                      width:"100%"
+                    }}
+                  >
+                <li
+                  key={index}
+                  className=" py-4 flex flex-row-reverse cursor-pointer mx-auto p-2 text-white hover:bg-blue-400 w-full"
+                >
+                  
+                    {icon}
+                    <span>{text}</span>
+                  
+                </li>
+                </NavLink>
               );
             })}
           </ul>
